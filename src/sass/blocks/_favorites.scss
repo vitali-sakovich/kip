@@ -1,0 +1,100 @@
+.catalog-container{
+    display: flex;
+    flex-flow: row wrap;
+    padding-right: 9.1%;
+    padding-bottom: 55px;
+    margin-top: 30px;
+}
+.content_favorites .catalog-container_col .cards{
+    width: calc(100% / 4);
+    padding-top: 8px;
+}
+.content_favorites .catalog-container_col .cards:nth-child(-n + 4){
+    padding-top: 0;
+}
+.catalog-container .cards{
+    border-bottom: solid 1px #757e8f;
+    margin-bottom: -1px;
+}
+.content_favorites .catalog-container_col .cards:hover{
+    padding-top: 0;
+}
+.sort__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 9.1%;
+    padding-left: 9.1%;
+}
+.sort__box{
+    display: flex;
+}
+.sort__box .sort:nth-child(1){
+    margin-right: 20px;
+}
+.sort-layout{
+    display: flex;
+}
+.sort-layout__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.sort-layout__btn svg .layout-icon{
+    opacity: 0.5;
+}
+
+.sort-layout__btn.active svg .layout-icon{
+    opacity: 1;
+}
+.catalog-container_row .cards{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+.catalog-container_row .cards .cards__link{
+    display: flex;
+}
+.catalog-container_row .cards .cards-img{
+    width: 226px;
+    min-width: 226px;
+}
+.catalog-container_row .cards .cards-name{
+    max-width: 255px;
+    margin-top: 43px;
+    margin-left: 29px;
+    padding-left: 0;
+}
+.catalog-container_row .cards .cards__comment{
+    position: absolute;
+    bottom: 25px;
+    left: 255px;
+    max-width: 250px;
+    margin: 0;
+}
+.catalog-container_row .cards .cards__inner{
+    width: 180px;
+    min-width: 180px;
+    padding: 0;
+    padding-top: 43px;
+    margin-right: 37px;
+}
+.catalog-container_row .cards .cards__price{
+    margin-bottom: 26px;
+}
+.catalog-container_row .cards .btn__add-favorites{
+    justify-content: flex-start;
+    padding-bottom: 0;
+}
+.content_favorites-not .pogination{
+    display: none;
+}
+.content_favorites-not .sort__row{
+    display: none;
+}

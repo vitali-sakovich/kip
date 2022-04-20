@@ -1,0 +1,2164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Автоматизация компрессорной станции</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="../img/favic.png">
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/nice-select.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="btn-catalog btn-catalog_open">
+            <a href="#" class="logo-btn">
+                <img src="../img/logo-min.svg" alt="logo">
+            </a>
+            <div class="btn-catalog__inner">
+                <svg class="btn-catalog__icon" xmlns="http://www.w3.org/2000/svg" width="40" height="22" viewBox="0 0 40 22">
+                    <g fill="none" fill-rule="evenodd">
+                        <g class="btn-catalog__icon-g" fill-rule="nonzero" stroke="#15BACC">
+                            <g>
+                                <path d="M36.5 341.5h-1v1h1v-1zm33 0h-29v1h29v-1zm5 0h-1v1h1v-1zm0-10h-39v1h39v-1zm-38-10h-1v1h1v-1zm33 0h-29v1h29v-1zm5 0h-1v1h1v-1z" transform="translate(-35 -321)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <svg class="btn-catalog__icon-close" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                    <g fill="none" fill-rule="evenodd">
+                        <g fill-rule="nonzero" stroke="#C4C4C4">
+                            <path d="M1240.284 58.707l-13.435 13.435-13.435-13.435-.707.707 13.435 13.435-13.435 13.435.707.707 13.435-13.435 13.435 13.435.707-.707-13.435-13.435 13.435-13.435-.707-.707z" transform="translate(-1212 -58)"/>
+                        </g>
+                    </g>
+                </svg>
+                <span class="btn-catalog_text">
+                    Каталог
+                </span>
+            </div>
+            <div class="down">
+                <svg class="down__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="34" viewBox="0 0 24 34">
+                    <g fill="none" fill-opacity=".43" fill-rule="evenodd">
+                        <g fill="#FFF" fill-rule="nonzero">
+                            <g>
+                                <path d="M55 591c6.627 0 12 5.373 12 12v10c0 6.627-5.373 12-12 12s-12-5.373-12-12v-10c0-6.627 5.373-12 12-12zm0 1c-5.972 0-10.833 4.615-10.996 10.368l-.004.299v10.666C44 619.224 48.925 624 55 624c5.972 0 10.833-4.615 10.996-10.368l.004-.299v-10.666C66 596.776 61.075 592 55 592zm.818 7.678v8.763l3.307-3.323v2.438l-4.12 4.122-4.13-4.122v-2.438l3.313 3.323v-8.763h1.63z" transform="translate(-43 -591)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <a href="#" class="header-logo">
+            <img src="../img/logo.svg" alt="logo" class="header-logo__img">
+            <img src="../img/logo-min.svg" alt="logo" class="header-logo__min">
+        </a>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Услуги</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Наши проекты</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Сотрудничество</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">О компании</a>
+            </li>
+            <li class="nav-item dropdown-btn">
+                <span class="nav-link" href="#">Покупателям</span>
+                <svg class="dropdown-btn__arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6">
+                    <g fill="none" fill-rule="evenodd">
+                        <g fill="#FFF">
+                            <g>
+                                <g>
+                                    <path d="M129 18L134 23 139 18 140 18 134 24 128 18z" transform="translate(-511 -94) translate(214 34) translate(169 42)"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-link">Доставка и оплата</a>
+                    <a href="#" class="dropdown-link">Обмен и возврат</a>
+                    <a href="#" class="dropdown-link">Гарантийное обслуживание</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Контакты</a>
+            </li>
+        </ul>
+        <div class="header-phone">
+            <a href="tel:+73912295951" class="header-phone__link">
+                <span>+7 (391) 229-59-51</span>
+                <svg class="header-phone__icon" xmlns="http://www.w3.org/2000/svg" width="27" height="36" viewBox="0 0 27 36">
+                    <g fill="none" fill-rule="evenodd">
+                        <g fill="#15BACC" fill-rule="nonzero">
+                            <path d="M589.317 28.42l-.012.006c-7.209 3.871-8.642 11.702-2.25 23.29 6.381 11.568 13.803 14.59 21.02 10.715 1.995-1.036 2.548-3.659 1.147-5.44l-3.374-4.233-.143-.172c-1.573-1.787-4.342-2.039-6.2-.515l-1.658 1.36-.35-.394c-2.718-3.115-4.706-6.752-5.875-10.76l-.132-.469 2.006-.66c2.371-.781 3.64-3.319 2.845-5.676l-1.819-5.035c-.742-2.104-3.214-3.05-5.205-2.017zm3.322 2.689l1.814 5.022c.433 1.286-.266 2.683-1.583 3.117l-2.065.681c-.955.29-1.505 1.31-1.276 2.288 1.284 4.748 3.613 9.006 6.9 12.625.722.717 1.87.784 2.628.184l1.717-1.409c1.05-.86 2.659-.684 3.51.387l3.37 4.228c.625.795.377 1.968-.512 2.43-6.178 3.317-12.446.765-18.336-9.913-5.823-10.556-4.718-17.107 1.225-20.44l.208-.114c.921-.478 2.063-.041 2.4.914z" transform="translate(-583 -28)"/>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+            <div class="btn__phone-modal">Заказать звонок</div>
+        </div>
+        <div class="menu-right">
+            <div class="menu-right__btn search-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22">
+                    <g fill="none" fill-rule="evenodd">
+                        <g fill="#FFF" fill-rule="nonzero">
+                            <g>
+                                <path d="M14.7 18.931c-5.357 0-9.7-4.238-9.7-9.465C5 4.238 9.343 0 14.7 0c5.357 0 9.7 4.238 9.7 9.466 0 5.227-4.343 9.465-9.7 9.465zm0-2.271c4.072 0 7.372-3.221 7.372-7.194s-3.3-7.194-7.372-7.194c-4.071 0-7.372 3.22-7.372 7.194 0 3.973 3.3 7.194 7.372 7.194zm4.426-1.498l1.617-1.635L28 20.366 26.383 22l-7.257-6.838z" transform="translate(-1215 -44) translate(1210 44)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="menu-right__btn basket-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="23" viewBox="0 0 29 23">
+                    <g fill="none" fill-rule="evenodd">
+                        <g fill="#FFF" fill-rule="nonzero">
+                            <g>
+                                <path d="M5.828 69.421H0V67h7.577l1.418 4.337H29l-3.418 10.996H10.049L5.83 69.421zm5.97 10.491h12.008l1.913-6.154H9.786l2.012 6.154zM14.082 90c1.556 0 2.816-1.265 2.816-2.825 0-1.56-1.26-2.824-2.816-2.824-1.555 0-2.816 1.264-2.816 2.824 0 1.56 1.26 2.825 2.816 2.825zm8.852 0c1.555 0 2.816-1.265 2.816-2.825 0-1.56-1.26-2.824-2.816-2.824-1.556 0-2.817 1.264-2.817 2.824 0 1.56 1.261 2.825 2.817 2.825z" transform="translate(-1210 -111) translate(1210 44)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="menu-right__btn authorization-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                    <g fill="none" fill-rule="evenodd">
+                        <g fill="#FFF" fill-rule="nonzero">
+                            <g>
+                                <path d="M24.081 152.6c1.715.429 2.919 1.97 2.919 3.738v1.483c0 .651-.528 1.179-1.179 1.179H6.18C5.528 159 5 158.472 5 157.821v-1.483c0-1.768 1.203-3.309 2.919-3.739l4.214-1.053-.005-.538c-.005-.482-.206-.962-.571-1.363-1.203-1.318-1.79-2.589-1.98-4.067-.072-.555-.085-.977-.085-1.93 0-3.647 2.87-6.582 6.53-6.648 3.617.066 6.486 3.002 6.486 6.648 0 .954-.013 1.376-.085 1.931-.19 1.478-.777 2.749-1.98 4.067-.365.4-.566.881-.57 1.364l-.006.537 4.214 1.053zm.562 3.738c0-.686-.467-1.285-1.133-1.45l-4.434-1.109c-.93-.232-1.58-1.072-1.569-2.03l.008-.764c.011-1.08.441-2.111 1.187-2.928.875-.96 1.254-1.78 1.383-2.78.055-.421.066-.776.066-1.629 0-2.364-1.843-4.248-4.13-4.291-2.33.043-4.172 1.927-4.172 4.29 0 .853.011 1.208.066 1.63.129.999.508 1.82 1.383 2.78.746.816 1.176 1.848 1.187 2.927l.008.763c.01.958-.639 1.8-1.569 2.031l-4.433 1.108c-.666.167-1.134.766-1.134 1.452v.305h17.286v-.305z" transform="translate(-1215 -181) translate(1210 44)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <a href="#" class="menu-right__btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="23" viewBox="0 0 25 23">
+                    <g fill="none" fill-rule="evenodd">
+                        <g fill="#FFF" fill-rule="nonzero">
+                            <g>
+                                <path d="M15.5 219.495l4.629 2.36-.883-4.991 3.701-3.498-5.12-.721-2.327-4.573-2.328 4.573-5.12.72 3.702 3.499-.883 4.99 4.629-2.359zm0 2.58L7.8 226l1.472-8.317L3 211.756l8.664-1.22L15.5 203l3.836 7.535 8.664 1.22-6.272 5.928L23.199 226l-7.699-3.924z" transform="translate(-1213 -247) translate(1210 44)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div class="catalog-modal">
+            <div class="header">
+                <div class="btn-catalog btn-catalog_close">
+                    <div class="logo-btn">
+                        <img src="../img/logo-min.svg" alt="logo">
+                    </div>
+                    <div class="btn-catalog__inner">
+                        <svg class="btn-catalog__icon" xmlns="http://www.w3.org/2000/svg" width="40" height="22" viewBox="0 0 40 22">
+                            <g fill="none" fill-rule="evenodd">
+                                <g class="btn-catalog__icon-g" fill-rule="nonzero" stroke="#15BACC">
+                                    <g>
+                                        <path d="M36.5 341.5h-1v1h1v-1zm33 0h-29v1h29v-1zm5 0h-1v1h1v-1zm0-10h-39v1h39v-1zm-38-10h-1v1h1v-1zm33 0h-29v1h29v-1zm5 0h-1v1h1v-1z" transform="translate(-35 -321)"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg class="btn-catalog__icon-close" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                            <g fill="none" fill-rule="evenodd">
+                                <g class="btn-catalog-close_color" fill-rule="nonzero" stroke="#C4C4C4">
+                                    <path d="M1240.284 58.707l-13.435 13.435-13.435-13.435-.707.707 13.435 13.435-13.435 13.435.707.707 13.435-13.435 13.435 13.435.707-.707-13.435-13.435 13.435-13.435-.707-.707z" transform="translate(-1212 -58)"/>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="btn-catalog_text">
+                            Каталог
+                        </span>
+                    </div>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <a href="#" class="header-logo">
+                    <img src="../img/logo.svg" alt="logo" class="header-logo__img">
+                    <img src="../img/logo-min.svg" alt="logo" class="header-logo__min">
+                </a>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Наши проекты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Сотрудничество</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О компании</a>
+                    </li>
+                    <li class="nav-item dropdown-btn">
+                        <span class="nav-link" href="#">Покупателям</span>
+                        <svg class="dropdown-btn__arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6">
+                            <g fill="none" fill-rule="evenodd">
+                                <g fill="#FFF">
+                                    <g>
+                                        <g>
+                                            <path d="M129 18L134 23 139 18 140 18 134 24 128 18z" transform="translate(-511 -94) translate(214 34) translate(169 42)"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-link">Доставка и оплата</a>
+                            <a href="#" class="dropdown-link">Обмен и возврат</a>
+                            <a href="#" class="dropdown-link">Гарантийное обслуживание</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <div class="header-phone">
+                    <a href="tel:+73912295951" class="header-phone__link">
+                        <span>+7 (391) 229-59-51</span>
+                        <svg class="header-phone__icon" xmlns="http://www.w3.org/2000/svg" width="27" height="36" viewBox="0 0 27 36">
+                            <g fill="none" fill-rule="evenodd">
+                                <g fill="#15BACC" fill-rule="nonzero">
+                                    <path d="M589.317 28.42l-.012.006c-7.209 3.871-8.642 11.702-2.25 23.29 6.381 11.568 13.803 14.59 21.02 10.715 1.995-1.036 2.548-3.659 1.147-5.44l-3.374-4.233-.143-.172c-1.573-1.787-4.342-2.039-6.2-.515l-1.658 1.36-.35-.394c-2.718-3.115-4.706-6.752-5.875-10.76l-.132-.469 2.006-.66c2.371-.781 3.64-3.319 2.845-5.676l-1.819-5.035c-.742-2.104-3.214-3.05-5.205-2.017zm3.322 2.689l1.814 5.022c.433 1.286-.266 2.683-1.583 3.117l-2.065.681c-.955.29-1.505 1.31-1.276 2.288 1.284 4.748 3.613 9.006 6.9 12.625.722.717 1.87.784 2.628.184l1.717-1.409c1.05-.86 2.659-.684 3.51.387l3.37 4.228c.625.795.377 1.968-.512 2.43-6.178 3.317-12.446.765-18.336-9.913-5.823-10.556-4.718-17.107 1.225-20.44l.208-.114c.921-.478 2.063-.041 2.4.914z" transform="translate(-583 -28)"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                    <div class="btn__phone-modal">Заказать звонок</div>
+                </div>
+                <div class="menu-right">
+                    <div class="menu-right__btn search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22">
+                            <g fill="none" fill-rule="evenodd">
+                                <g fill="#FFF" fill-rule="nonzero">
+                                    <g>
+                                        <path d="M14.7 18.931c-5.357 0-9.7-4.238-9.7-9.465C5 4.238 9.343 0 14.7 0c5.357 0 9.7 4.238 9.7 9.466 0 5.227-4.343 9.465-9.7 9.465zm0-2.271c4.072 0 7.372-3.221 7.372-7.194s-3.3-7.194-7.372-7.194c-4.071 0-7.372 3.22-7.372 7.194 0 3.973 3.3 7.194 7.372 7.194zm4.426-1.498l1.617-1.635L28 20.366 26.383 22l-7.257-6.838z" transform="translate(-1215 -44) translate(1210 44)"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="menu-right__btn basket-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="23" viewBox="0 0 29 23">
+                            <g fill="none" fill-rule="evenodd">
+                                <g fill="#FFF" fill-rule="nonzero">
+                                    <g>
+                                        <path d="M5.828 69.421H0V67h7.577l1.418 4.337H29l-3.418 10.996H10.049L5.83 69.421zm5.97 10.491h12.008l1.913-6.154H9.786l2.012 6.154zM14.082 90c1.556 0 2.816-1.265 2.816-2.825 0-1.56-1.26-2.824-2.816-2.824-1.555 0-2.816 1.264-2.816 2.824 0 1.56 1.26 2.825 2.816 2.825zm8.852 0c1.555 0 2.816-1.265 2.816-2.825 0-1.56-1.26-2.824-2.816-2.824-1.556 0-2.817 1.264-2.817 2.824 0 1.56 1.261 2.825 2.817 2.825z" transform="translate(-1210 -111) translate(1210 44)"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <a href="#" class="menu-right__btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                            <g fill="none" fill-rule="evenodd">
+                                <g fill="#FFF" fill-rule="nonzero">
+                                    <g>
+                                        <path d="M24.081 152.6c1.715.429 2.919 1.97 2.919 3.738v1.483c0 .651-.528 1.179-1.179 1.179H6.18C5.528 159 5 158.472 5 157.821v-1.483c0-1.768 1.203-3.309 2.919-3.739l4.214-1.053-.005-.538c-.005-.482-.206-.962-.571-1.363-1.203-1.318-1.79-2.589-1.98-4.067-.072-.555-.085-.977-.085-1.93 0-3.647 2.87-6.582 6.53-6.648 3.617.066 6.486 3.002 6.486 6.648 0 .954-.013 1.376-.085 1.931-.19 1.478-.777 2.749-1.98 4.067-.365.4-.566.881-.57 1.364l-.006.537 4.214 1.053zm.562 3.738c0-.686-.467-1.285-1.133-1.45l-4.434-1.109c-.93-.232-1.58-1.072-1.569-2.03l.008-.764c.011-1.08.441-2.111 1.187-2.928.875-.96 1.254-1.78 1.383-2.78.055-.421.066-.776.066-1.629 0-2.364-1.843-4.248-4.13-4.291-2.33.043-4.172 1.927-4.172 4.29 0 .853.011 1.208.066 1.63.129.999.508 1.82 1.383 2.78.746.816 1.176 1.848 1.187 2.927l.008.763c.01.958-.639 1.8-1.569 2.031l-4.433 1.108c-.666.167-1.134.766-1.134 1.452v.305h17.286v-.305z" transform="translate(-1215 -181) translate(1210 44)"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="#" class="menu-right__btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="23" viewBox="0 0 25 23">
+                            <g fill="none" fill-rule="evenodd">
+                                <g fill="#FFF" fill-rule="nonzero">
+                                    <g>
+                                        <path d="M15.5 219.495l4.629 2.36-.883-4.991 3.701-3.498-5.12-.721-2.327-4.573-2.328 4.573-5.12.72 3.702 3.499-.883 4.99 4.629-2.359zm0 2.58L7.8 226l1.472-8.317L3 211.756l8.664-1.22L15.5 203l3.836 7.535 8.664 1.22-6.272 5.928L23.199 226l-7.699-3.924z" transform="translate(-1213 -247) translate(1210 44)"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="close-tabs">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30">
+                        <g fill="none" fill-rule="evenodd">
+                            <g fill-rule="nonzero" stroke="#15BACC">
+                                <path d="M46.435 29.858l-13.081 13.08-1.061 1.06 1.06 1.061 13.082 13.083.707-.707L34.21 44.5H61.5v-1H34.205l12.937-12.935-.707-.707z" transform="translate(-31 -29)"/>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="catalog-modal__block">
+                <div class="catalog-tab__list">
+                    <div class="catalog-tab catalog-tab_active">
+                        <div class="catalog-tab__img"><img src="../img/logo-KM.png" alt=""></div>
+                        <span class="catalog-tab__name">Меандр</span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="catalog-tab">
+                        <div class="catalog-tab__img"><img src="../img/logo-suppliers3.png" alt=""></div>
+                        <span class="catalog-tab__name">Novatech Electro</span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="catalog-tab">
+                        <div class="catalog-tab__img"><img src="../img/logo-relsib.png" alt=""></div>
+                        <span class="catalog-tab__name">Рэлсиб</span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="catalog-tab">
+                        <div class="catalog-tab__img"><img src="../img/logo-KM.png" alt=""></div>
+                        <span class="catalog-tab__name">Меандр</span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="catalog-tab">
+                        <div class="catalog-tab__img"><img src="../img/logo-suppliers3.png" alt=""></div>
+                        <span class="catalog-tab__name">Novatech Electro</span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="catalog-tab">
+                        <div class="catalog-tab__img"><img src="../img/logo-relsib.png" alt=""></div>
+                        <span class="catalog-tab__name">Рэлсиб</span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <div class="catalog-tabs__list">
+                    <div class="catalog-tabs catalog-tabs_active">
+                        <div class="catalog-tabs__scroll">
+                            <a href="#" class="catalog-link">Автоматические выключатели</a>
+                            <a href="#" class="catalog-link">Блоки питания</a>
+                            <a href="#" class="catalog-link">Вольтметры и амперметры</a>
+                            <a href="#" class="catalog-link">Вспомогательное модульное оборудование</a>
+                            <a href="#" class="catalog-link">Датчики бесконтактные</a>
+                            <a href="#" class="catalog-link">Контроллеры</a>
+                            <a href="#" class="catalog-link">Корпуса пластиковые для РЭА</a>
+                            <a href="#" class="catalog-link">Перемычки</a>
+                            <a href="#" class="catalog-link">Предохранители</a>
+                            <a href="#" class="catalog-link">Реле времени</a>
+                            <a href="#" class="catalog-link">Реле контроля напряжения</a>
+                            <a href="#" class="catalog-link">Реле контроля тока</a>
+                            <a href="#" class="catalog-link">Реле промежуточные (модульные)</a>
+                            <a href="#" class="catalog-link">Счетчики импульсов</a>
+                            <a href="#" class="catalog-link">Счетчики моточасов</a>
+                            <a href="#" class="catalog-link">Тахометры</a>
+                            <a href="#" class="catalog-link">Термореле</a>
+                            <a href="#" class="catalog-link">Тиристорные регуляторы мощности</a>
+                            <a href="#" class="catalog-link">Устройства защиты сети</a>
+                            <a href="#" class="catalog-link">Фотореле</a>
+                            <a href="#" class="catalog-link">Штекеры и гнёзда</a>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="catalog-tabs">
+                        <div class="catalog-tabs__scroll">
+                            <a href="#" class="catalog-link">Источник бесперебойного питания</a>
+                            <a href="#" class="catalog-link">Контроллеры насосных станций (реле уровня)</a>
+                            <a href="#" class="catalog-link">Переключатели фаз</a>
+                            <a href="#" class="catalog-link">Преобразователи интерфейсов</a>
+                            <a href="#" class="catalog-link">Приборы индикации и контроля</a>
+                            <a href="#" class="catalog-link">Контроллеры</a>
+                            <a href="#" class="catalog-link">Регистраторы электрических процессов</a>
+                            <a href="#" class="catalog-link">Реле времени</a>
+                            <a href="#" class="catalog-link">Реле напряжения</a>
+                            <a href="#" class="catalog-link">Реле тока и ограничители мощности</a>
+                            <a href="#" class="catalog-link">Таймеры программируемые</a>
+                            <a href="#" class="catalog-link">Температурные контроллеры</a>
+                            <a href="#" class="catalog-link">Устройства защиты электродвигателей</a>
+                            <a href="#" class="catalog-link">Устройства с Wi-Fi управлением</a>
+                            <a href="#" class="catalog-link">Счетчики моточасов</a>
+                            <a href="#" class="catalog-link">Источник бесперебойного питания</a>
+                            <a href="#" class="catalog-link">Контроллеры насосных станций (реле уровня)</a>
+                            <a href="#" class="catalog-link">Переключатели фаз</a>
+                            <a href="#" class="catalog-link">Преобразователи интерфейсов</a>
+                            <a href="#" class="catalog-link">Приборы индикации и контроля</a>
+                            <a href="#" class="catalog-link">Контроллеры</a>
+                            <a href="#" class="catalog-link">Регистраторы электрических процессов</a>
+                            <a href="#" class="catalog-link">Реле времени</a>
+                            <a href="#" class="catalog-link">Реле напряжения</a>
+                            <a href="#" class="catalog-link">Реле тока и ограничители мощности</a>
+                            <a href="#" class="catalog-link">Таймеры программируемые</a>
+                            <a href="#" class="catalog-link">Температурные контроллеры</a>
+                            <a href="#" class="catalog-link">Устройства защиты электродвигателей</a>
+                            <a href="#" class="catalog-link">Устройства с Wi-Fi управлением</a>
+                            <a href="#" class="catalog-link">Счетчики моточасов</a>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="catalog-tabs">
+                        <div class="catalog-tabs__scroll">
+                            <a href="#" class="catalog-link">Автоматические выключатели</a>
+                            <a href="#" class="catalog-link">Блоки питания</a>
+                            <a href="#" class="catalog-link">Вольтметры и амперметры</a>
+                            <a href="#" class="catalog-link">Вспомогательное модульное оборудование</a>
+                            <a href="#" class="catalog-link">Датчики бесконтактные</a>
+                            <a href="#" class="catalog-link">Контроллеры</a>
+                            <a href="#" class="catalog-link">Корпуса пластиковые для РЭА</a>
+                            <a href="#" class="catalog-link">Перемычки</a>
+                            <a href="#" class="catalog-link">Предохранители</a>
+                            <a href="#" class="catalog-link">Реле времени</a>
+                            <a href="#" class="catalog-link">Реле контроля напряжения</a>
+                            <a href="#" class="catalog-link">Реле контроля тока</a>
+                            <a href="#" class="catalog-link">Реле промежуточные (модульные)</a>
+                            <a href="#" class="catalog-link">Счетчики импульсов</a>
+                            <a href="#" class="catalog-link">Счетчики моточасов</a>
+                            <a href="#" class="catalog-link">Тахометры</a>
+                            <a href="#" class="catalog-link">Термореле</a>
+                            <a href="#" class="catalog-link">Тиристорные регуляторы мощности</a>
+                            <a href="#" class="catalog-link">Устройства защиты сети</a>
+                            <a href="#" class="catalog-link">Фотореле</a>
+                            <a href="#" class="catalog-link">Штекеры и гнёзда</a>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="catalog-tabs">
+                        <div class="catalog-tabs__scroll">
+                            <a href="#" class="catalog-link">Автоматические выключатели</a>
+                            <a href="#" class="catalog-link">Блоки питания</a>
+                            <a href="#" class="catalog-link">Вольтметры и амперметры</a>
+                            <a href="#" class="catalog-link">Вспомогательное модульное оборудование</a>
+                            <a href="#" class="catalog-link">Датчики бесконтактные</a>
+                            <a href="#" class="catalog-link">Контроллеры</a>
+                            <a href="#" class="catalog-link">Корпуса пластиковые для РЭА</a>
+                            <a href="#" class="catalog-link">Перемычки</a>
+                            <a href="#" class="catalog-link">Предохранители</a>
+                            <a href="#" class="catalog-link">Реле времени</a>
+                            <a href="#" class="catalog-link">Реле контроля напряжения</a>
+                            <a href="#" class="catalog-link">Реле контроля тока</a>
+                            <a href="#" class="catalog-link">Реле промежуточные (модульные)</a>
+                            <a href="#" class="catalog-link">Счетчики импульсов</a>
+                            <a href="#" class="catalog-link">Счетчики моточасов</a>
+                            <a href="#" class="catalog-link">Тахометры</a>
+                            <a href="#" class="catalog-link">Термореле</a>
+                            <a href="#" class="catalog-link">Тиристорные регуляторы мощности</a>
+                            <a href="#" class="catalog-link">Устройства защиты сети</a>
+                            <a href="#" class="catalog-link">Фотореле</a>
+                            <a href="#" class="catalog-link">Штекеры и гнёзда</a>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="catalog-tabs">
+                        <div class="catalog-tabs__scroll">
+                            <a href="#" class="catalog-link">Источник бесперебойного питания</a>
+                            <a href="#" class="catalog-link">Контроллеры насосных станций (реле уровня)</a>
+                            <a href="#" class="catalog-link">Переключатели фаз</a>
+                            <a href="#" class="catalog-link">Преобразователи интерфейсов</a>
+                            <a href="#" class="catalog-link">Приборы индикации и контроля</a>
+                            <a href="#" class="catalog-link">Контроллеры</a>
+                            <a href="#" class="catalog-link">Регистраторы электрических процессов</a>
+                            <a href="#" class="catalog-link">Реле времени</a>
+                            <a href="#" class="catalog-link">Реле напряжения</a>
+                            <a href="#" class="catalog-link">Реле тока и ограничители мощности</a>
+                            <a href="#" class="catalog-link">Таймеры программируемые</a>
+                            <a href="#" class="catalog-link">Температурные контроллеры</a>
+                            <a href="#" class="catalog-link">Устройства защиты электродвигателей</a>
+                            <a href="#" class="catalog-link">Устройства с Wi-Fi управлением</a>
+                            <a href="#" class="catalog-link">Счетчики моточасов</a>
+                            <a href="#" class="catalog-link">Источник бесперебойного питания</a>
+                            <a href="#" class="catalog-link">Контроллеры насосных станций (реле уровня)</a>
+                            <a href="#" class="catalog-link">Переключатели фаз</a>
+                            <a href="#" class="catalog-link">Преобразователи интерфейсов</a>
+                            <a href="#" class="catalog-link">Приборы индикации и контроля</a>
+                            <a href="#" class="catalog-link">Контроллеры</a>
+                            <a href="#" class="catalog-link">Регистраторы электрических процессов</a>
+                            <a href="#" class="catalog-link">Реле времени</a>
+                            <a href="#" class="catalog-link">Реле напряжения</a>
+                            <a href="#" class="catalog-link">Реле тока и ограничители мощности</a>
+                            <a href="#" class="catalog-link">Таймеры программируемые</a>
+                            <a href="#" class="catalog-link">Температурные контроллеры</a>
+                            <a href="#" class="catalog-link">Устройства защиты электродвигателей</a>
+                            <a href="#" class="catalog-link">Устройства с Wi-Fi управлением</a>
+                            <a href="#" class="catalog-link">Счетчики моточасов</a>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="catalog-tabs">
+                        <div class="catalog-tabs__scroll">
+                            <a href="#" class="catalog-link">Автоматические выключатели</a>
+                            <a href="#" class="catalog-link">Блоки питания</a>
+                            <a href="#" class="catalog-link">Вольтметры и амперметры</a>
+                            <a href="#" class="catalog-link">Вспомогательное модульное оборудование</a>
+                            <a href="#" class="catalog-link">Датчики бесконтактные</a>
+                            <a href="#" class="catalog-link">Контроллеры</a>
+                            <a href="#" class="catalog-link">Корпуса пластиковые для РЭА</a>
+                            <a href="#" class="catalog-link">Перемычки</a>
+                            <a href="#" class="catalog-link">Предохранители</a>
+                            <a href="#" class="catalog-link">Реле времени</a>
+                            <a href="#" class="catalog-link">Реле контроля напряжения</a>
+                            <a href="#" class="catalog-link">Реле контроля тока</a>
+                            <a href="#" class="catalog-link">Реле промежуточные (модульные)</a>
+                            <a href="#" class="catalog-link">Счетчики импульсов</a>
+                            <a href="#" class="catalog-link">Счетчики моточасов</a>
+                            <a href="#" class="catalog-link">Тахометры</a>
+                            <a href="#" class="catalog-link">Термореле</a>
+                            <a href="#" class="catalog-link">Тиристорные регуляторы мощности</a>
+                            <a href="#" class="catalog-link">Устройства защиты сети</a>
+                            <a href="#" class="catalog-link">Фотореле</a>
+                            <a href="#" class="catalog-link">Штекеры и гнёзда</a>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal basket">
+            <div class="overlay"></div>
+            <div class="modal-block basket-block">
+                <div class="modal-header">
+                    <h3 class="title-main">Корзина</h3>
+                    <div class="close-modal">
+                        <img src="../img/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="basket-inner">
+                    <div class="basket-list">
+                        <div class="basket-cards">
+                            <div class="cards-img">
+                                <img src="../img/card1.jpg" alt="">
+                            </div>
+                            <div class="cards-content">
+                                <a href="#" class="cards-name">
+                                    Контроллер управления туннельной печью КУТП-1
+                                </a>
+                                <div class="counter">
+                                    <div class="counter__minus">
+                                        <img src="../img/minus.svg" alt="minus">
+                                    </div>
+                                    <input type="number" class="counter__number" value="1">
+                                    <div class="counter__plus">
+                                        <img src="../img/plus.svg" alt="plus">
+                                    </div>
+                                </div>
+                                <div class="price-counter">
+                                    = 2 180 руб.
+                                </div>
+                            </div>
+                            <div class="clear-card">
+                                <img src="../img/clear-card.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="basket-cards">
+                            <div class="cards-img">
+                                <img src="../img/card2.jpg" alt="">
+                            </div>
+                            <div class="cards-content">
+                                <a href="#" class="cards-name">
+                                    Мультифункциональное реле напряжения рн-240t
+                                </a>
+                                <div class="counter">
+                                    <div class="counter__minus">
+                                        <img src="../img/minus.svg" alt="minus">
+                                    </div>
+                                    <input type="number" class="counter__number" value="1">
+                                    <div class="counter__plus">
+                                        <img src="../img/plus.svg" alt="plus">
+                                    </div>
+                                </div>
+                                <div class="price-counter">
+                                    = 8 000 руб.
+                                </div>
+                            </div>
+                            <div class="clear-card">
+                                <img src="../img/clear-card.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="basket-cards">
+                            <div class="cards-img">
+                                <img src="../img/card3.jpg" alt="">
+                            </div>
+                            <div class="cards-content">
+                                <a href="#" class="cards-name">
+                                    Измеритель температуры
+                                    IT-9-IRm бесконтактный
+                                </a>
+                                <div class="counter">
+                                    <div class="counter__minus">
+                                        <img src="../img/minus.svg" alt="minus">
+                                    </div>
+                                    <input type="number" class="counter__number" value="1">
+                                    <div class="counter__plus">
+                                        <img src="../img/plus.svg" alt="plus">
+                                    </div>
+                                </div>
+                                <div class="price-counter">
+                                    = 2 180 руб.
+                                </div>
+                            </div>
+                            <div class="clear-card">
+                                <img src="../img/clear-card.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="basket-cards">
+                            <div class="cards-img">
+                                <img src="../img/card1.jpg" alt="">
+                            </div>
+                            <div class="cards-content">
+                                <a href="#" class="cards-name">
+                                    Контроллер управления туннельной печью КУТП-1
+                                </a>
+                                <div class="counter">
+                                    <div class="counter__minus">
+                                        <img src="../img/minus.svg" alt="minus">
+                                    </div>
+                                    <input type="number" class="counter__number" value="1">
+                                    <div class="counter__plus">
+                                        <img src="../img/plus.svg" alt="plus">
+                                    </div>
+                                </div>
+                                <div class="price-counter">
+                                    = 2 180 руб.
+                                </div>
+                            </div>
+                            <div class="clear-card">
+                                <img src="../img/clear-card.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="basket-cards">
+                            <div class="cards-img">
+                                <img src="../img/card2.jpg" alt="">
+                            </div>
+                            <div class="cards-content">
+                                <a href="#" class="cards-name">
+                                    Мультифункциональное реле напряжения рн-240t
+                                </a>
+                                <div class="counter">
+                                    <div class="counter__minus">
+                                        <img src="../img/minus.svg" alt="minus">
+                                    </div>
+                                    <input type="number" class="counter__number" value="1">
+                                    <div class="counter__plus">
+                                        <img src="../img/plus.svg" alt="plus">
+                                    </div>
+                                </div>
+                                <div class="price-counter">
+                                    = 8 000 руб.
+                                </div>
+                            </div>
+                            <div class="clear-card">
+                                <img src="../img/clear-card.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="basket-cards">
+                            <div class="cards-img">
+                                <img src="../img/card3.jpg" alt="">
+                            </div>
+                            <div class="cards-content">
+                                <a href="#" class="cards-name">
+                                    Измеритель температуры
+                                    IT-9-IRm бесконтактный
+                                </a>
+                                <div class="counter">
+                                    <div class="counter__minus">
+                                        <img src="../img/minus.svg" alt="minus">
+                                    </div>
+                                    <input type="number" class="counter__number" value="1">
+                                    <div class="counter__plus">
+                                        <img src="../img/plus.svg" alt="plus">
+                                    </div>
+                                </div>
+                                <div class="price-counter">
+                                    = 2 180 руб.
+                                </div>
+                            </div>
+                            <div class="clear-card">
+                                <img src="../img/clear-card.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket-price">
+                        <div class="price-item">
+                            <span class="name-price">Стоимость</span>
+                            <div class="price">10 180 <span>руб.</span></div>
+                        </div>
+                        <div class="price-item">
+                            <span class="name-price">Скидка
+                                <span class="prompt">
+                                    <img src="../img/invalid-name.svg" alt="">
+                                    <div class="promt-block">
+                                        Описание скидки
+                                    </div>
+                                </span>
+                            </span>
+                            <div class="price price-discount">-180 <span>руб.</span></div>
+                        </div>
+                        <div class="price-item">
+                            <span class="name-price">Итого</span>
+                            <div class="price price-total">10 000 <span>руб.</span></div>
+                        </div>
+                        <div class="btn btn_blue">
+                            Оформить заказ
+                        </div>
+                    </div>
+                    <span class="basket-not__text">Здесь пока ничего нет</span>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal-search">
+            <div class="overlay"></div>
+            <div class="modal-block">
+                <div class="modal-header">
+                    <h3 class="title-main">Поиск по каталогу</h3>
+                    <div class="close-modal">
+                        <img src="../img/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="search-block">
+                    <form action="#" method="get" class="search-form">
+                        <label class="label">
+                            <input type="text" required="" name="serch" class="input">
+                            <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                        </label>
+                        <div class="resalt-search">
+                            <div class="resalt-search__list">
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card1.jpg" alt="">
+                                    </div>
+                                    <span href="#" class="resalt-name">
+                                        Измеритель температуры
+                                        IT-9-IRm бесконтактный
+                                    </span>
+                                    <div class="resalt-price">
+                                        2 180 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card1.jpg" alt="">
+                                    </div>
+                                    <span href="#" class="resalt-name">
+                                        Контроллер управления туннельной печью КУТП-2
+                                    </span>
+                                    <div class="resalt-price">
+                                        2 900 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card2.jpg" alt="">
+                                    </div>
+                                    <span class="resalt-name">
+                                        Контроллер температуры
+                                    </span>
+                                    <div class="resalt-price">
+                                        25 000 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card2.jpg" alt="">
+                                    </div>
+                                    <span class="resalt-name">
+                                        Контроллер с крутилками и экранчиком
+                                    </span>
+                                    <div class="resalt-price">
+                                        200 000 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card3.jpg" alt="">
+                                    </div>
+                                    <span class="resalt-name">
+                                        Контроллер управления туннельной печью КУТП-1
+                                    </span>
+                                    <div class="resalt-price">
+                                        2 180 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card3.jpg" alt="">
+                                    </div>
+                                    <span class="resalt-name">
+                                        Контроллер управления туннельной печью КУТП-2
+                                    </span>
+                                    <div class="resalt-price">
+                                        2 900 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card1.jpg" alt="">
+                                    </div>
+                                    <span href="#" class="resalt-name">
+                                        Измеритель температуры
+                                        IT-9-IRm бесконтактный
+                                    </span>
+                                    <div class="resalt-price">
+                                        2 180 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card1.jpg" alt="">
+                                    </div>
+                                    <span href="#" class="resalt-name">
+                                        Измеритель температуры
+                                        IT-9-IRm бесконтактный
+                                    </span>
+                                    <div class="resalt-price">
+                                        2 180 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card1.jpg" alt="">
+                                    </div>
+                                    <span href="#" class="resalt-name">
+                                        Контроллер управления туннельной печью КУТП-2
+                                    </span>
+                                    <div class="resalt-price">
+                                        2 900 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card2.jpg" alt="">
+                                    </div>
+                                    <span class="resalt-name">
+                                        Контроллер температуры
+                                    </span>
+                                    <div class="resalt-price">
+                                        25 000 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card2.jpg" alt="">
+                                    </div>
+                                    <span class="resalt-name">
+                                        Контроллер с крутилками и экранчиком
+                                    </span>
+                                    <div class="resalt-price">
+                                        200 000 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card3.jpg" alt="">
+                                    </div>
+                                    <span class="resalt-name">
+                                        Контроллер управления туннельной печью КУТП-1
+                                    </span>
+                                    <div class="resalt-price">
+                                        2 180 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card3.jpg" alt="">
+                                    </div>
+                                    <span class="resalt-name">
+                                        Контроллер управления туннельной печью КУТП-2
+                                    </span>
+                                    <div class="resalt-price">
+                                        2 900 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card1.jpg" alt="">
+                                    </div>
+                                    <span href="#" class="resalt-name">
+                                        Измеритель температуры
+                                        IT-9-IRm бесконтактный
+                                    </span>
+                                    <div class="resalt-price">
+                                        2 180 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card1.jpg" alt="">
+                                    </div>
+                                    <span href="#" class="resalt-name">
+                                        Контроллер управления туннельной печью КУТП-2
+                                    </span>
+                                    <div class="resalt-price">
+                                        2 900 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card2.jpg" alt="">
+                                    </div>
+                                    <span class="resalt-name">
+                                        Контроллер температуры
+                                    </span>
+                                    <div class="resalt-price">
+                                        25 000 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card2.jpg" alt="">
+                                    </div>
+                                    <span class="resalt-name">
+                                        Контроллер с крутилками и экранчиком
+                                    </span>
+                                    <div class="resalt-price">
+                                        200 000 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card3.jpg" alt="">
+                                    </div>
+                                    <span class="resalt-name">
+                                        Контроллер управления туннельной печью КУТП-1
+                                    </span>
+                                    <div class="resalt-price">
+                                        2 180 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card3.jpg" alt="">
+                                    </div>
+                                    <span class="resalt-name">
+                                        Контроллер управления туннельной печью КУТП-2
+                                    </span>
+                                    <div class="resalt-price">
+                                        2 900 руб.
+                                    </div>
+                                </a>
+                                <a href="#" class="resalt-search__item">
+                                    <div class="resalt-img">
+                                        <img src="../img/card1.jpg" alt="">
+                                    </div>
+                                    <span href="#" class="resalt-name">
+                                        Измеритель температуры
+                                        IT-9-IRm бесконтактный
+                                    </span>
+                                    <div class="resalt-price">
+                                        2 180 руб.
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <button class="btn btn-border">Показать все результаты</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal_main modal-call">
+            <div class="overlay"></div>
+            <div class="modal-block">
+                <div class="modal-header">
+                    <h3 class="title-main title_modal">Заказать звонок</h3>
+                    <div class="close-modal">
+                        <img src="../img/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="modal-inner">
+                    <div class="modal-text">
+                        Представьтесь и мы вам перезвоним
+                    </div>
+                    <form method="post" data-parsley-validate="" action="#" class="form">
+                        <label class="label">
+                            <input type="text" required name="name" data-parsley-trigger="change" data-parsley-required-message="Введите ваше имя" class="input">
+                            <span class="placeholder-input">Ваше имя*</span>
+                            <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                        </label>
+                        <label class="label">
+                            <input type="text" name="phone" data-parsley-required-message="Введите контактный номер телефона" data-parsley-required="true" required data-parsley-trigger="change" class="input phone_validate">
+                            <span class="placeholder-input">Телефон *</span>
+                            <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                        </label>
+                        <label class="label">
+                            <input type="text" name="time" data-parsley-trigger="change" data-parsley-required-message="Удобное время звонка" class="input">
+                            <span class="placeholder-input">Удобное время звонка</span>
+                            <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                        </label>
+                        <div class="chek__label">
+                            <label class="check-inner">
+                                <input type="checkbox" name="ch" data-parsley-required="true" required data-parsley-multiple="ch" data-parsley-required-message="Примите согласие на обработку персональных данных" checked="checked" class="check-data">
+                                <span class="checkbox-data"></span>
+                            </label>
+                            <span class="data-span">Я даю свое
+                                <span class="data-span__link btn-agree">согласие на обработку персональных данных</span>
+                            </span>
+                        </div>
+                        <button class="btn btn-border">
+                            Перезвоните мне
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal_main consultation">
+            <div class="overlay"></div>
+            <div class="modal-block">
+                <div class="modal-header">
+                    <h3 class="title-main title_modal">Получить консультацию</h3>
+                    <div class="close-modal">
+                        <img src="../img/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="modal-inner">
+                    <div class="modal-text">
+                        Оставьте свои контакты и наш менеджер свяжется с вами
+                    </div>
+                    <form method="post" data-parsley-validate="" action="#" class="form">
+                        <label class="label">
+                            <input type="text" required name="name" data-parsley-trigger="change" data-parsley-required-message="Введите ваше имя" class="input">
+                            <span class="placeholder-input">Ваше имя*</span>
+                            <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                        </label>
+                        <label class="label">
+                            <input type="text" name="phone" data-parsley-required-message="Введите контактный номер телефона" data-parsley-required="true" required data-parsley-trigger="change" class="input phone_validate">
+                            <span class="placeholder-input">Телефон *</span>
+                            <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                        </label>
+                        <label class="label-textarea">
+                            <textarea name="text" class="textarea"></textarea>
+                            <span class="placeholder-input">Комментарий</span>
+                            <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                        </label>
+                        <div class="chek__label">
+                            <label class="check-inner">
+                                <input type="checkbox" name="ch" data-parsley-required="true" required data-parsley-multiple="ch" data-parsley-required-message="Примите согласие на обработку персональных данных" checked="checked" class="check-data">
+                                <span class="checkbox-data"></span>
+                            </label>
+                            <span class="data-span">Я даю свое
+                                <span class="data-span__link btn-agree">согласие на обработку персональных данных</span>
+                            </span>
+                        </div>
+                        <button class="btn btn-border">
+                            Перезвоните мне
+                        </button>
+                    </form>
+                </div> 
+            </div>
+        </div>
+        <div class="modal modal_main order-service">
+            <div class="overlay"></div>
+            <div class="modal-block">
+                <div class="modal-header">
+                    <h3 class="title-main title_modal">Заказать услугу</h3>
+                    <div class="close-modal">
+                        <img src="../img/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="modal-inner">
+                    <form method="post" data-parsley-validate="" action="#" class="form">
+                        <label class="label">
+                            <input type="text" name="name" data-parsley-trigger="change" data-parsley-required-message="Введите ваше имя" class="input">
+                            <span class="placeholder-input">Ваше имя</span>
+                            <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                        </label>
+                        <label class="label">
+                            <input type="text" name="phone" data-parsley-required-message="Введите контактный номер телефона" data-parsley-required="true" required data-parsley-trigger="change" class="input phone_validate">
+                            <span class="placeholder-input">Телефон *</span>
+                            <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                        </label>
+                        <div class="chek__label">
+                            <label class="check-inner">
+                                <input type="checkbox" name="ch" data-parsley-required="true" required data-parsley-multiple="ch" data-parsley-required-message="Примите согласие на обработку персональных данных" checked="checked" class="check-data">
+                                <span class="checkbox-data"></span>
+                            </label>
+                            <span class="data-span">Я даю свое
+                                <span class="data-span__link btn-agree">согласие на обработку персональных данных</span>
+                            </span>
+                        </div>
+                        <button class="btn btn-border">
+                            Отправить
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal_main autorization">
+            <div class="overlay"></div>
+            <div class="modal-block">
+                <div class="modal-header">
+                    <h3 class="title-main title_modal">Авторизация</h3>
+                    <div class="close-modal">
+                        <img src="../img/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="modal-inner">
+                    <form method="post" data-parsley-validate="" action="#" class="form">
+                        <label class="label">
+                            <input type="text" required name="email" data-parsley-required-message="Введите e-mail" data-parsley-trigger="change" class="input">
+                            <span class="placeholder-input">E-mail</span>
+                            <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                        </label>
+                        <label class="label">
+                            <input type="password" name="password" required data-parsley-trigger="change" data-parsley-required-message="Введите пароль" class="input js-password">
+                            <span class="placeholder-input">Пароль</span>
+                            <span class="password-control"><img src="../img/password-icon.svg"></span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember" class="checkbox-rem">
+                            <span class="check"></span>
+                            <span class="text-check">Запомнить меня</span>
+                        </label>
+                        <button class="btn btn-border">
+                            Войти
+                        </button>
+                        <div class="btn-row">
+                            <div class="button_link btn-password-recovery">
+                                Забыли пароль?
+                            </div>
+                            <div class="button_link btn-registration">
+                                Зарегистрироваться
+                            </div>
+                        </div>
+                        <div class="networks-form">
+                            <span>Вход через соцсети</span>
+                            <div class="networks-form__list">
+                                <div class="networks-form__item">
+                                    <img src="../img/google.png" alt="">
+                                </div>
+                                <div class="networks-form__item">
+                                    <img src="../img/ya.png" alt="">
+                                </div>
+                                <div class="networks-form__item">
+                                    <img src="../img/if-vkontakte.png" alt="">
+                                </div>
+                                <div class="networks-form__item">
+                                    <img src="../img/mail.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal_main password-recovery">
+            <div class="overlay"></div>
+            <div class="modal-block">
+                <div class="modal-header">
+                    <h3 class="title-main title_modal">Восстановление пароля</h3>
+                    <div class="close-modal">
+                        <img src="../img/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="modal-text">
+                    Укажите адрес электронной почты, с которым вы регистрировались ранее, и мы вышлем инструкцию по
+                    смене пароля
+                </div>
+                <div class="modal-inner">
+                    <form method="post" data-parsley-validate="" action="#" class="form">
+                        <label class="label">
+                            <input type="email" name="email" required data-parsley-trigger="change" data-parsley-required-message="Введите e-mail" class="input js-password">
+                            <span class="placeholder-input">E-mail</span>
+                            <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                        </label>
+                        <button class="btn btn-border">
+                            Выслать
+                        </button>
+                        <div class="btn-row">
+                            <div class="button_link authorization-btn">
+                                Авторизация
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal_main registration">
+            <div class="overlay"></div>
+            <div class="modal-block">
+                <div class="modal-header">
+                    <h3 class="title-main title_modal">Регистрация</h3>
+                    <div class="close-modal">
+                        <img src="../img/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="modal-inner">
+                    <div class="form__block registration-form">
+                        <div class="form-tabs">
+                            <div class="form-tab active">
+                                Физ. лицо
+                            </div>
+                            <div class="form-tab">
+                                Юр. лицо
+                            </div>
+                        </div>
+                        <div class="form-content">
+                            <div class="form-content__item active">
+                                <form method="post" data-parsley-validate="" action="#" class="form">
+                                    <label class="label">
+                                        <input type="text" name="name" required data-parsley-trigger="change" data-parsley-required-message="Введите ваше имя" class="input">
+                                        <span class="placeholder-input">Ваше имя</span>
+                                        <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                                    </label>
+                                    <label class="label">
+                                        <input type="text" name="phone" required data-parsley-required-message="Введите контактный номер телефона" data-parsley-trigger="change" data-parsley-required="true" class="input phone_validate">
+                                        <span class="placeholder-input">Телефон</span>
+                                        <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                                    </label>
+                                    <label class="label">
+                                        <input type="email" name="email" required data-parsley-required-message="Введите e-mail" data-parsley-trigger="change" class="input">
+                                        <span class="placeholder-input">E-mail</span>
+                                        <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                                    </label>
+                                    <label class="label">
+                                        <input type="password" required name="password" data-parsley-trigger="change" data-parsley-required-message="Ведите пароль" class="input js-password">
+                                        <span class="placeholder-input">Пароль</span>
+                                        <span class="password-control"><img src="../img/password-icon.svg"></span>
+                                    </label>
+                                    <label class="label">
+                                        <input type="password" name="password" required data-parsley-trigger="change" data-parsley-required-message="Введите подтверждение пароля" class="input js-password">
+                                        <span class="placeholder-input">Подтверждение пароля</span>
+                                        <span class="password-control"><img src="../img/password-icon.svg"></span>
+                                    </label>
+                                    <div class="chek__label">
+                                        <label class="check-inner">
+                                            <input type="checkbox" name="ch" data-parsley-required="true" required data-parsley-multiple="ch" data-parsley-required-message="Примите согласие на обработку персональных данных" checked="checked" class="check-data">
+                                            <span class="checkbox-data"></span>
+                                        </label>
+                                        <span class="data-span">Я даю свое
+                                            <span class="data-span__link btn-agree">согласие на обработку персональных данных</span>
+                                        </span>
+                                    </div>
+                                    <button class="btn btn-border">
+                                        Зарегистрироваться
+                                    </button>
+                                    <div class="btn-row">
+                                        <div class="button_link authorization-btn">
+                                            У меня уже есть аккаунт
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="form-content__item">
+                                <form method="post" data-parsley-validate="" action="#" class="form">
+                                    <label class="label">
+                                        <input type="text" required name="name" data-parsley-trigger="change" data-parsley-required-message="Введите название организации" class="input">
+                                        <span class="placeholder-input">Название организации *</span>
+                                        <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                                    </label>
+                                    <label class="label">
+                                        <input type="text" name="inn" data-parsley-trigger="change" data-parsley-required-message="Введите ИНН" class="input">
+                                        <span class="placeholder-input">ИНН</span>
+                                        <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                                    </label>
+                                    <label class="label">
+                                        <input type="text" name="kpp" data-parsley-trigger="change" data-parsley-required-message="Введите КПП" class="input">
+                                        <span class="placeholder-input">КПП</span>
+                                        <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                                    </label>
+                                    <label class="label">
+                                        <input type="text" name="address" data-parsley-trigger="change" data-parsley-required-message="Введите юридический адрес" class="input">
+                                        <span class="placeholder-input">Юридический адрес</span>
+                                        <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                                    </label>
+                                    <label class="label">
+                                        <input type="text" required name="name" data-parsley-trigger="change" data-parsley-required-message="Введите имя контактного лица" class="input">
+                                        <span class="placeholder-input">Имя контактного лица *</span>
+                                        <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                                    </label>
+                                    <label class="label">
+                                        <input type="email" required name="email" data-parsley-trigger="change" data-parsley-required-message="Введите e-mail контактного лица" class="input">
+                                        <span class="placeholder-input">E-mail контактного лица *</span>
+                                        <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                                    </label>
+                                    <label class="label">
+                                        <input type="text" name="phone" data-parsley-required-message="Введите телефон контактного лица" data-parsley-trigger="change" data-parsley-required="true" class="input phone_validate">
+                                        <span class="placeholder-input">Телефон контактного лица *</span>
+                                        <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                                    </label>
+                                    <label class="label">
+                                        <input type="password" required name="password" data-parsley-trigger="change" data-parsley-required-message="Введите пароль" class="input js-password">
+                                        <span class="placeholder-input">Пароль *</span>
+                                        <span class="password-control"><img src="../img/password-icon.svg"></span>
+                                    </label>
+                                    <label class="label">
+                                        <input type="password" required name="password" data-parsley-trigger="change" data-parsley-required-message="Введите подтверждение пароля" class="input js-password">
+                                        <span class="placeholder-input">Подтверждение пароля *</span>
+                                        <span class="password-control"><img src="../img/password-icon.svg"></span>
+                                    </label>
+                                    <div class="chek__label">
+                                        <label class="check-inner">
+                                            <input type="checkbox" name="ch" data-parsley-required="true" required data-parsley-multiple="ch" data-parsley-required-message="Примите согласие на обработку персональных данных" checked="checked" class="check-data">
+                                            <span class="checkbox-data"></span>
+                                        </label>
+                                        <span class="data-span">Я даю свое
+                                            <span class="data-span__link btn-agree">согласие на обработку персональных данных</span>
+                                        </span>
+                                    </div>
+                                    <button class="btn btn-border">
+                                        Зарегистрироваться
+                                    </button>
+                                    <div class="btn-row">
+                                        <div class="button_link authorization-btn">
+                                            У меня уже есть аккаунт
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal_main modal-thank">
+            <div class="overlay"></div>
+            <div class="modal-block">
+                <div class="modal-header">
+                    <h3 class="title-main title_modal">Спасибо!</h3>
+                    <div class="close-modal">
+                        <img src="../img/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="modal-inner">
+                    <div class="thank-modal">
+                        <span>Ваша заявка принята</span>
+                        <img src="../img/thank.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal_main consent-modal">
+            <div class="overlay"></div>
+            <div class="modal-block">
+                <div class="modal-header">
+                    <h3 class="title-main title_modal title_modal-consent">Согласие посетителя сайта <a class="link" href="https://приборысибирь.рф">https://приборысибирь.рф</a> на обработку персональных
+                        данных</h3>
+                    <div class="close-modal">
+                        <img src="../img/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="modal-inner">
+                    <div class="modal-text simplebar">
+                        <p class="consent-text"> Настоящим свободно, своей волей и в своем интересе даю согласие ООО
+                            «Приборы Сибирь», которое находится по адресу:<a class="link" href="https://приборысибирь.рф">https://приборысибирь.рф</a>, на автоматизированную и
+                            неавтоматизированную обработку моих персональных данных, в том числе с использованием
+                            интернет - сервисов на сайте <a class="link" href="https://приборысибирь.рф">https://приборысибирь.рф</a> в соответствии со следующим
+                            перечнем:
+                        </p>
+                        <ul class="consent-list">
+                            <li>
+                                персональные данные – номер телефона, адрес моей электронной почты, фамилия, имя,
+                                отчество;
+                            </li>
+                            <li>
+                                источник захода на сайт <a class="link" href="https://приборысибирь.рф">https://приборысибирь.рф</a> и информация поискового
+                                или рекламного запроса;
+                            </li>
+                            <li>
+                                данные о пользовательском устройстве (среди которых разрешение, версия и другие
+                                атрибуты, характеризующие пользовательское устройство);
+                            </li>
+                            <li>
+                                пользовательские клики, просмотры страниц, заполнения полей, показы и просмотры баннеров
+                                и видео;· данные, характеризующие аудиторные сегменты;
+                            </li>
+                            <li>
+                                номер телефона, адрес моей электронной почты, фамилия, имя, отчество; параметры сессии;
+                            </li>
+                            <li>
+                                данные о времени посещения;
+                            </li>
+                            <li>
+                                идентификатор пользователя, хранимый в cookie,
+                            </li>
+                        </ul>
+                        <p class="consent-text">
+                            для целей повышения осведомленности посетителей Сайта <a class="link" href="https://приборысибирь.рф">https://приборысибирь.рф</a> о продуктах и услугах ООО
+                            «Приборы Сибирь», предоставления релевантной рекламной информации и оптимизации рекламы,
+                            исполнения договорных обязательств, проведение рекламных кампаний и маркетинговых
+                            исследований.
+                        </p>
+
+                        <p class="consent-text">
+                            Также даю свое согласие на предоставление ООО «Приборы Сибирь»,моих персональных данныхкак
+                            посетителя Сайта <a class="link" href="https://приборысибирь.рф">https://приборысибирь.рф</a>, с которыми сотрудничает
+                            ООО «Приборы
+                            Сибирь». ООО «Приборы Сибирь»вправе осуществлять обработку моих персональных данных
+                            следующими способами: сбор, запись, систематизация, накопление, хранение, обновление,
+                            изменение, использование, передача (распространение, предоставление, доступ).
+                        </p>
+                        <p class="consent-text">
+                            Настоящее согласие вступает в силу с момента моего перехода на Сайт <a class="link" href="https://приборысибирь.рф">https://приборысибирь.рф</a> и действует в течение
+                            сроков, установленных действующим законодательством РФ.
+                        </p>
+                        <p class="consent-text">
+                            Основанием для обработки персональных данных являются: Ст. 24 Конституции Российской
+                            Федерации; ст.6 Федерального закона No152-ФЗ «О персональных данных».
+                        </p>
+                        <p class="consent-text">
+                            Персональные данные обрабатываются до окончания обработки. Так же обработка персональных
+                            данных может быть прекращена по запросу субъекта персональных данных.
+                        </p>
+                        <p class="consent-text">
+                            Хранение персональных данных зафиксированных на бумажных носителях осуществляется согласно
+                            Федеральному закону No125-ФЗ «Об архивном деле в Российской Федерации» и иным нормативно
+                            правовым актам в области архивного дела и архивного хранения. Срок или условие прекращения
+                            обработки персональных данных: прекращение деятельности ООО «Приборы Сибирь».
+                        </p>
+                    </div>
+                    <div class="btn-consent">
+                        <div class="btn btn-border consent-yes">
+                            Принимаю
+                        </div>
+                        <div class="btn btn-border consent-no">
+                            Не принимаю
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal_main politics-modal">
+            <div class="overlay"></div>
+            <div class="modal-block">
+                <div class="modal-header">
+                    <h3 class="title-main title_modal">Политика конфиденциальности</h3>
+                    <div class="close-modal">
+                        <img src="../img/close.svg" alt="">
+                    </div>
+                </div>
+                <div class="modal-inner">
+                    <div class="modal-text simplebar">
+                        <p class="consent-text">Мы стремимся уважать информацию личного характера, касающуюся
+                            посетителей нашего сайта. Внастоящей Политике конфиденциальности разъясняются некоторые из
+                            мер, которые мы предпринимаем для защиты Вашей частной жизни.
+                        </p>
+                        <span class="title-politics">
+                            Конфиденциальность информации личного характера
+                        </span>
+                        <p class="consent-text">
+                            "Информация личного характера" обозначает любую информацию, которая может быть использована
+                            для идентификации личности, например, фамилия или адрес электронной почты.
+                        </p>
+                        <span class="title-politics">
+                            Использование информации частного характера
+                        </span>
+                        <p class="consent-text">
+                            Информация личного характера, полученная через наш сайт, используется нами, среди прочего,
+                            для целей регистрирования пользователей, для поддержки работы и совершенствования нашего
+                            сайта, отслеживания политики и статистики пользования сайтом, а также в целях, разрешенных
+                            вами.
+                        </p>
+                        <span class="title-politics">
+                            Использование информации частного характера
+                        </span>
+                        <p class="consent-text">
+                            Информация личного характера, полученная через наш сайт, используется нами, среди прочего,
+                            для целей регистрирования пользователей, для поддержки работы и совершенствования нашего
+                            сайта, отслеживания политики и статистики пользования сайтом, а также в целях, разрешенных
+                            вами.
+                        </p>
+                        <span class="title-politics">
+                            Раскрытие информации частного характера
+                        </span>
+                        <p class="consent-text">
+                            Мы нанимаем другие компании или связаны с компаниями, которые по нашему поручению
+                            предоставляют услуги, такие как обработка и доставка информации, размещение информации на
+                            данном сайте, доставка содержания и услуг, предоставляемых настоящим сайтом, выполнение
+                            статистического анализа. Чтобы эти компании могли предоставлять эти услуги, мы можем
+                            сообщать им информацию личного характера, однако им будет разрешено получать только ту
+                            информацию личного характера, которая необходима им для предоставления услуг. Они обязаны
+                            соблюдать конфиденциальность этой информации, и им запрещено использовать ее в иных целях.
+                        </p>
+                        <p class="consent-text">
+                            Мы можем использовать или раскрывать Ваши личные данные и по иным причинам, в том числе,
+                            если мы считаем, что это необходимо в целях выполнения требований закона или решений суда,
+                            для защиты наших прав или собственности, защиты личной безопасности пользователей нашего
+                            сайта или представителей широкой общественности, в целях расследования или принятия мер в
+                            отношении незаконной или предполагаемой незаконной деятельности, в связи с корпоративными
+                            сделками, такими как разукрупнение, слияние, консолидация, продажа активов или в
+                            маловероятном случае банкротства, или в иных целях в соответствии с Вашим согласием.
+                        </p>
+                        <p class="consent-text">
+                            Мы не будем продавать, предоставлять на правах аренды или лизинга наши списки пользователей
+                            с адресами электронной почты третьим сторонам.
+                        </p>
+                        <span class="title-politics">
+                            Доступ к информации личного характера
+                        </span>
+                        <p class="consent-text">
+                            Если после предоставления информации на данный сайт, Вы решите, что Вы не хотите, чтобы Ваша
+                            персональная информация использовалась в каких-либо целях, связавшись с нами по следующему
+                            адресу: <a class="link" href="mailto: andrew.fedorow@gmail.com">andrew.fedorow@gmail.com.</a>
+                        </p>
+                        <span class="title-politics">
+                            Наша практика в отношении информации неличного характера
+                        </span>
+                        <p class="consent-text">
+                            Мы можем собирать информацию неличного характера о Вашем посещении сайта, в том числе
+                            просматриваемые вами страницы, выбираемые вами ссылки, а также другие действия в связи с
+                            Вашим использованием нашего сайта. Кроме того, мы можем собирать определенную стандартную
+                            информацию, которую Ваш браузер направляет на любой посещаемый вами сайт, такую как Ваш
+                            IP-адрес, тип браузера и язык, время, проведенное на сайте, и адрес соответствующего
+                            веб-сайта.
+                        </p>
+                        <span class="title-politics">
+                            Использование закладок (cookies)
+                        </span>
+                        <p class="consent-text">
+                            Файл cookie - это небольшой текстовый файл, размещаемый на Вашем твердом диске нашим
+                            сервером. Cookies содержат информацию, которая позже может быть нами прочитана. Никакие
+                            данные, собранные нами таким путем, не могут быть использованы для идентификации посетителя
+                            сайта. Не могут cookies использоваться и для запуска программ или для заражения Вашего
+                            компьютера вирусами. Мы используем cookies в целях контроля использования нашего сайта,
+                            сбора информации неличного характера о наших пользователях, сохранения Ваших предпочтений и
+                            другой информации на Вашем компьютере с тем, чтобы сэкономить Ваше время за счет снятия
+                            необходимости многократно вводить одну и ту же информацию, а также в целях отображения
+                            Вашего персонализированного содержания в ходе Ваших последующих посещений нашего сайта. Эта
+                            информация также используется для статистических исследований, направленных на корректировку
+                            содержания в соответствии с предпочтениями пользователей.
+                        </p>
+                        <span class="title-politics">
+                            Агрегированная информация
+                        </span>
+                        <p class="consent-text">
+                            Мы можем объединять в неидентифицируемом формате предоставляемую вами личную информацию и
+                            личную информацию, предоставляемую другими пользователями, создавая таким образом
+                            агрегированные данные. Мы планируем анализировать данные агрегированного характера в
+                            основном в целях отслеживания групповых тенденций. Мы не увязываем агрегированные данные о
+                            пользователях с информацией личного характера, поэтому агрегированные данные не могут
+                            использоваться для установления связи с вами или Вашей идентификации. Вместо фактических
+                            имен в процессе создания агрегированных данных и анализа мы будем использовать имена
+                            пользователей. В статистических целях и в целях отслеживания групповых тенденций анонимные
+                            агрегированные данные могут предоставляться другим компаниям, с которыми мы взаимодействуем.
+                        </p>
+                        <span class="title-politics">
+                            Изменения, вносимые в настоящее Заявление о конфиденциальности
+                        </span>
+                        <p class="consent-text">
+                            Мы сохраняем за собой право время от времени вносить изменения или дополнения в настоящую
+                            Политику конфиденциальности - частично или полностью. Мы призываем Вас периодически
+                            перечитывать нашу Политику конфиденциальности с тем, чтобы быть информированными
+                            относительно того, как мы защищаем Вашу личную информацию. С последним вариантом Политики
+                            конфиденциальности можно ознакомиться путем нажатия на гипертекстовую ссылку "Политика
+                            конфиденциальности", находящуюся в нижней части домашней страницы данного сайта. Во многих
+                            случаях, при внесении изменений в Политику конфиденциальности, мы также изменяем и дату,
+                            проставленную в начале текста Политики конфиденциальности, однако других уведомлений об
+                            изменениях мы можем вам не направлять. Однако, если речь идет о существенных изменениях, мы
+                            уведомим Вас, либо разместив предварительное заметное объявление о таких изменениях, либо
+                            непосредственно направив вам уведомление по электронной почте. Продолжение использования
+                            вами данного сайта и выход на него означает Ваше согласие с такими изменениями.
+                        </p>
+                        <p class="consent-text">
+                            Связь с нами. Если у Вас возникли какие-либо вопросы или предложения по поводу нашего
+                            положения о конфиденциальности, пожалуйста, свяжитесь с нами по следующему адресу:
+                            <a class="link" href="mailto: andrew.fedorow@gmail.com">andrew.fedorow@gmail.com.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="triger"></div>
+    </header>
+    <div class="preloader">
+        <div class="preloader__block">
+            <img src="../img/preloader.gif" alt="">
+        </div>
+    </div>
+    <div class="title__block">
+        <div class="breadcrumb">
+            <a href="#" class="breadcrumb__link">
+                Главная
+            </a>
+            <span class="slash none">---</span>
+            <a href="#" class="breadcrumb__link none">
+            </a>
+            <span class="slash none">---</span>
+            <a href="#" class="breadcrumb__link none">
+            </a>
+        </div>
+        <h1 class="title-main">
+            Автоматизация компрессорной станции
+        </h1>
+    </div>
+    <div class="content content_projects-detail">
+        <section class="projects-detail">
+            <div class="projects-detail__info">
+                <div class="projects-box">
+                    <span class="projects-box__name">
+                        Задача
+                    </span>
+                    <span class="text text_small">
+                        Обеспечить удаленное автоматизированное рабочее место (АРМ) – рабочая станция оператора
+                        с предустановленным программным обеспечением на базе персонального компьютера с монитором для
+                        установки в диспетчерской либо на базе защищенного панельного компьютера для установки в местах
+                        с повышенными требованиями к надежности (в цехах, на производственных площадках).
+                    </span>
+                </div>
+                <div class="projects-inner">
+                    <div class="projects-box">
+                        <span class="projects-box__name">
+                            Срок реализации
+                        </span>
+                        <span class="text text_small">
+                            8 недель
+                        </span>
+                    </div>
+                    <div class="projects-box">
+                        <span class="projects-box__name">
+                            Стоимость
+                        </span>
+                        <span class="text text_small">
+                            86 000 руб.
+                        </span>
+                    </div>
+                </div>
+                <div class="projects-box">
+                    <span class="projects-box__name">
+                        Расположение
+                    </span>
+                    <span class="text text_small">
+                        г. Красноярск
+                    </span>
+                </div>
+            </div>
+            <div class="galery-slider">
+                <div class="gallery-slider__for gallery-slider__for-projects">
+                    <a href="../img/prjects.png" class="gallery__fancy" data-fancybox="gallery-product">
+                        <img src="../img/prjects.png" alt="" class="gallery__img">
+                    </a>
+                    <a href="../img/card2.jpg" class="gallery__fancy" data-fancybox="gallery-product">
+                        <img src="../img/card2.jpg" alt="" class="gallery__img">
+                    </a>
+                    <a href="../img/card3.jpg" class="gallery__fancy" data-fancybox="gallery-product">
+                        <img src="../img/card3.jpg" alt="" class="gallery__img">
+                    </a>
+                    <a href="../img/card4.jpg" class="gallery__fancy" data-fancybox="gallery-product">
+                        <img src="../img/card4.jpg" alt="" class="gallery__img">
+                    </a>
+                    <a href="../img/card3.jpg" class="gallery__fancy" data-fancybox="gallery-product">
+                        <img src="../img/card3.jpg" alt="" class="gallery__img">
+                    </a>
+                    <a href="../img/prjects.png" class="gallery__fancy" data-fancybox="gallery-product">
+                        <img src="../img/prjects.png" alt="" class="gallery__img">
+                    </a>
+                    <a href="../img/card2.jpg" class="gallery__fancy" data-fancybox="gallery-product">
+                        <img src="../img/card2.jpg" alt="" class="gallery__img">
+                    </a>
+                    <a href="../img/card3.jpg" class="gallery__fancy" data-fancybox="gallery-product">
+                        <img src="../img/card3.jpg" alt="" class="gallery__img">
+                    </a>
+                    <a href="../img/card4.jpg" class="gallery__fancy" data-fancybox="gallery-product">
+                        <img src="../img/card4.jpg" alt="" class="gallery__img">
+                    </a>
+                    <a href="../img/card3.jpg" class="gallery__fancy" data-fancybox="gallery-product">
+                        <img src="../img/card3.jpg" alt="" class="gallery__img">
+                    </a>
+                </div>
+                <div class="gallery-slider__inner">
+                    <div class="gallery-btn gallery-btn_prev gallery-btn_prev-projects">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="20" viewBox="0 0 13 20">
+                            <g fill="none" fill-opacity=".168" fill-rule="evenodd">
+                                <g fill="#fff">
+                                    <g>
+                                        <path d="M9.013 26.994L0 18 3.001 18 12.996 27.993 3.001 38 0 38 9.013 29z" transform="translate(-120 -883) translate(120 865) matrix(-1 0 0 1 12.996 0)"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+
+                    </div>
+                    <div class="gallery-slider__row gallery-slider__row-projects">
+                        <div class="gallery__item">
+                            <img src="../img/prjects.png" alt="" class="gallery__img">
+                        </div>
+                        <div class="gallery__item">
+                            <img src="../img/card2.jpg" alt="" class="gallery__img">
+                        </div>
+                        <div class="gallery__item">
+                            <img src="../img/card3.jpg" alt="" class="gallery__img">
+                        </div>
+                        <div class="gallery__item">
+                            <img src="../img/card4.jpg" alt="" class="gallery__img">
+                        </div>
+                        <div class="gallery__item">
+                            <img src="../img/card3.jpg" alt="" class="gallery__img">
+                        </div>
+                        <div class="gallery__item">
+                            <img src="../img/prjects.png" alt="" class="gallery__img">
+                        </div>
+                        <div class="gallery__item">
+                            <img src="../img/card2.jpg" alt="" class="gallery__img">
+                        </div>
+                        <div class="gallery__item">
+                            <img src="../img/card3.jpg" alt="" class="gallery__img">
+                        </div>
+                        <div class="gallery__item">
+                            <img src="../img/card4.jpg" alt="" class="gallery__img">
+                        </div>
+                        <div class="gallery__item">
+                            <img src="../img/card3.jpg" alt="" class="gallery__img">
+                        </div>
+                    </div>
+                    <div class="gallery-btn gallery-btn_next gallery-btn_next-projects">
+                        <svg class="gallery-next__img" xmlns="http://www.w3.org/2000/svg" width="13" height="20" viewBox="0 0 13 20">
+                            <g fill="none" fill-opacity=".168" fill-rule="evenodd">
+                                <g fill="#fff">
+                                    <g>
+                                        <path d="M9.013 26.994L0 18 3.001 18 12.996 27.993 3.001 38 0 38 9.013 29z" transform="translate(-120 -883) translate(120 865) matrix(-1 0 0 1 12.996 0)"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-about">
+            <div class="product-about__inner">
+                <div class="product-tabs">
+                    <div class="product-tab active_tab">
+                        Описание
+                    </div>
+                    <div class="product-tab">
+                        Характеристики
+                    </div>
+                </div>
+                <div class="product__content">
+                    <div class="product__content-item content_active">
+                        <span class="text text_middle">
+                            Удаленное автоматизированное рабочее место (АРМ) – рабочая станция оператора с
+                            предустановленным программным обеспечением на базе персонального компьютера с монитором для
+                            установки в диспетчерской либо на базе защищенного панельного компьютера для установки в
+                            местах с повышенными требованиями к надежности (в цехах, на производственных площадках).
+                        </span>
+                        <span class="text text_middle">
+                            Возможности АРМ включают все возможности панели управления щита AntexAir и дополнительно:
+                        </span>
+                        <ul class="text text_middle text_list">
+                            <li>
+                                Дублирование всех данных с сенсорной панели управления.
+                            </li>
+                            <li>
+                                Возможность создания визуализации и мнемосхем.
+                            </li>
+                            <li>
+                                Интеграция со смежными информационными системами предприятия.
+                            </li>
+                            <li>
+                                Возможность выгрузки архивных данных в формат Excel.
+                            </li>
+                            <li>
+                                Возможность построения отчетов по выбранным параметрам (отчет за смену).
+                            </li>
+                            <li>
+                                Звуковое оповещение об аварийных событиях.
+                            </li>
+                            <li>
+                                Контроль периодичности проведения технического обслуживания компрессорных установок.
+                            </li>
+                            <li>
+                                Разграничение уровней доступа персонала (сервисный инженер, оператор).
+                            </li>
+                        </ul>
+                        <div class="download-inner">
+                            <a href="#" download="" class="download">
+                                <img src="../img/file.svg" alt="file">
+                                <span class="download__name">Схема</span>
+                                <span class="download__size">PDF, 1.8 МB</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product__content-item">
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Диапазон напряжения питания DC (постоянное)
+                            </span>
+                            <span class="characteristics__text">
+                                20 %
+                            </span>
+                        </div>
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Диапазон напряжения питания нагрузки
+                            </span>
+                            <span class="characteristics__text">
+                                30 В
+                            </span>
+                        </div>
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Диапазон рабочих температур
+                            </span>
+                            <span class="characteristics__text">
+                                100 °С
+                            </span>
+                        </div>
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Дистанционное программирование устройства
+                            </span>
+                            <span class="characteristics__text">
+                                Да
+                            </span>
+                        </div>
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Задержка включения
+                            </span>
+                            <span class="characteristics__text">
+                                1 с
+                            </span>
+                        </div>
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Защита оборудования от перегрева
+                            </span>
+                            <span class="characteristics__text">
+                                Да
+                            </span>
+                        </div>
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Защита от импульсных помех
+                            </span>
+                            <span class="characteristics__text">
+                                Да
+                            </span>
+                        </div>
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Защита от искрения/дуги
+                            </span>
+                            <span class="characteristics__text">
+                                Нет
+                            </span>
+                        </div>
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Защита от перегрузок и перегрева
+                            </span>
+                            <span class="characteristics__text">
+                                Нет
+                            </span>
+                        </div>
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Звуковая сигнализация аварийных ситуаций
+                            </span>
+                            <span class="characteristics__text">
+                                Да
+                            </span>
+                        </div>
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Звуковое давление на расстоянии
+                            </span>
+                            <span class="characteristics__text">
+                                10 дБ
+                            </span>
+                        </div>
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Измерение скорости вращения вала
+                            </span>
+                            <span class="characteristics__text">
+                                Нет
+                            </span>
+                        </div>
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Индикатор состояния встроенного реле
+                            </span>
+                            <span class="characteristics__text">
+                                Да
+                            </span>
+                        </div>
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Индикаторы наличия питания и работы агрегатов
+                            </span>
+                            <span class="characteristics__text">
+                                Нет
+                            </span>
+                        </div>
+                        <div class="characteristics__row">
+                            <span class="characteristics__name">
+                                Индикация состояния выхода
+                            </span>
+                            <span class="characteristics__text">
+                                Нет
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-about__footer">
+                <a href="#" class="product-about__logo">
+                    <img src="../img/logo.svg" alt="logo">
+                </a>
+                <div class="btn btn-border js-btn-modal-consultations">
+                    Получить консультацию
+                </div>
+                <div class="social-share">
+                    <span class="social-share__text">
+                        Поделиться
+                    </span>
+                    <div class="uSocial-Share" data-pid="a45c333e6c4b29d3be12517ae0697c5d" data-type="share" data-options="round-rect,style1,default,absolute,horizontal,size32,eachCounter0,counter0" data-social="fb,vk,ok,vi,telegram,wa" data-mobile="sms">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews wrapper">
+            <div class="review">
+                <a href="../img/review.jpg" class="review__img" data-fancybox="reviews">
+                    <img src="../img/review.jpg" alt="">
+                </a>
+                <div class="reviews__content">
+                    <span class="reviews__name">
+                        Отзыв заказчика
+                    </span>
+                    <span class="reviews__text">
+                        «Молодцы, хорошо сделали. Обращусь еще.»
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section class="section-form">
+            <div class="form-video">
+                <video muted preload="auto" loop="loop" autoplay="autoplay" width="100%" height="100%">
+                    <source src="../video/4.mp4" type="video/mp4">
+                    <source src="../video/4.webm" type="video/webm"> 
+                </video>
+            </div>
+            <div class="form-block">
+                <div class="form-text">
+                    Понравился проект? Оставьте заявку
+                    и наши специалисты свяжутся с вами
+                </div>
+                <form method="post" data-parsley-validate="" action="#" class="form">
+                    <label class="label">
+                        <input type="text" name="name" data-parsley-trigger="change" data-parsley-required-message="Введите ваше имя" class="input">
+                        <span class="placeholder-input">Ваше имя</span>
+                        <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                    </label>
+                    <label class="label">
+                        <input type="text" name="phone" data-parsley-required-message="Введите контактный номер телефона" data-parsley-required="true" required data-parsley-trigger="change" class="input phone_validate">
+                        <span class="placeholder-input">Контактный номер *</span>
+                        <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                    </label>
+                    <label class="label-textarea">
+                        <textarea name="text" class="textarea" required data-parsley-trigger="change" data-parsley-required-message="Введите ваше сообщение"></textarea>
+                        <span class="placeholder-input">Сообщение *</span>
+                        <span class="clear-input"><img src="../img/clear-input.svg" alt=""></span>
+                    </label>
+                    <button class="btn btn-border">
+                        Отправить
+                    </button>
+                    <div class="chek__label">
+                        <label class="check-inner">
+                            <input type="checkbox" name="ch" data-parsley-required="true" required data-parsley-multiple="ch" data-parsley-required-message="Примите согласие на обработку персональных данных" checked="checked" class="check-data">
+                            <span class="checkbox-data"></span>
+                        </label>
+                        <span class="data-span">Я даю свое
+                            <span class="data-span__link btn-agree">согласие на обработку персональных данных</span>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="slider-projects">
+            <h4 class="title title_small">
+                Похожие проекты
+            </h4>
+            <div class="slider-projects__wrapper">
+                <div class="slider-projects__track">
+                    <a href="#" class="projects__card">
+                        <div class="prjects__img">
+                            <img src="../img/prjects.png" alt="">
+                        </div>
+                        <div class="cards-name">
+                            Автоматизация компрессорной станции
+                        </div>
+                        <span class="text text_small">
+                            Система автоматизации компрессорной станции предназначена для мониторинга параметров и
+                            автоматического управления режимами работы компрессорной станции.
+                        </span>
+                    </a>
+                    <a href="#" class="projects__card">
+                        <div class="prjects__img">
+                            <img src="../img/prjects.png" alt="">
+                        </div>
+                        <div class="cards-name">
+                            Установка подогрева воды
+                        </div>
+                        <span class="text text_small">
+                            Краткое описание проекта
+                        </span>
+                    </a>
+                    <a href="#" class="projects__card">
+                        <div class="prjects__img">
+                            <img src="../img/prjects.png" alt="">
+                        </div>
+                        <div class="cards-name">
+                            Автоматизация насосного оборудования и клапанов котельной
+                        </div>
+                        <span class="text text_small">
+                            Краткое описание проекта
+                        </span>
+                    </a>
+                    <a href="#" class="projects__card">
+                        <div class="prjects__img">
+                            <img src="../img/prjects.png" alt="">
+                        </div>
+                        <div class="cards-name">
+                            Шкаф управления для очистки воды села Черемуховка
+                        </div>
+                        <span class="text text_small">
+                            Краткое описание проекта
+                        </span>
+                    </a>
+                </div>
+                <div class="slider-arrow">
+                    <div class="arrow-btn project-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="20" viewBox="0 0 33 20">
+                            <g fill="none" fill-opacity=".692" fill-rule="evenodd">
+                                <g fill="#FFF">
+                                    <g>
+                                        <path d="M38.5 59.994L66.517 59.994 57.504 51 60.505 51 70.5 60.993 60.505 71 57.504 71 66.517 62 38.5 62z" transform="translate(-1210 -850) translate(1172 799)"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="arrow-btn arrow-btn_prev project-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="20" viewBox="0 0 33 20">
+                            <g fill="none" fill-opacity=".692" fill-rule="evenodd">
+                                <g fill="#FFF">
+                                    <g>
+                                        <path d="M38.5 59.994L66.517 59.994 57.504 51 60.505 51 70.5 60.993 60.505 71 57.504 71 66.517 62 38.5 62z" transform="translate(-1210 -850) translate(1172 799)"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer__row">
+            <div class="nav-footer">
+                <a href="#" class="nav-footer__link">Услуги</a>
+                <a href="#" class="nav-footer__link">Наши проекты</a>
+                <a href="#" class="nav-footer__link">Сотрудничество</a>
+                <a href="#" class="nav-footer__link">О компании</a>
+                <a href="#" class="nav-footer__link">Доставка и оплата </a>
+                <a href="#" class="nav-footer__link">Обмен и возврат</a>
+                <a href="#" class="nav-footer__link">Гарантийное обслуживание</a>
+                <a href="#" class="nav-footer__link">Контакты</a>
+            </div>
+            <a href="#" download="" class="download">
+                <img src="../img/file.svg" alt="file">
+                <span class="download__name">Прайс-лист</span>
+                <span class="download__size">PDF, 1.8 МB</span>
+            </a>
+        </div>
+        <div class="footer__row">
+            <div class="footer__contacts">
+                <div class="footer__contacts-col">
+                    <a href="tel:+79001234567" class="footer__contacts-link">
+                        <img src="../img/icon-phone.svg" alt="">
+                        +7 900 123-45-67
+                    </a>
+                    <a href="mailto:info@mail.ru" class="footer__contacts-link">
+                        <img src="../img/mail.svg" alt="">
+                        info@mail.ru
+                    </a>
+                </div>
+                <div class="footer__contacts-col">
+                    <div class="footer__contacts-time">
+                        <span>ПН–ПТ с 9:00–18:00</span>
+                        <span> СБ и ВС выходные</span>
+                    </div>
+                </div>
+            </div>
+            <div class="networks">
+                <a href="#" class="networks__link">
+                    <img src="../img/insta.png" alt="">
+                </a>
+                <a href="#" class="networks__link">
+                    <img src="../img/vk.png" alt="">
+                </a>
+                <a href="#" class="networks__link">
+                    <img src="../img/facebook.png" alt="">
+                </a>
+            </div>
+            <div class="payment">
+                <span class="payment__text">Принимаем к оплате:</span>
+                <div class="payment__row">
+                    <div class="payment__item">
+                        <img src="../img/mir.svg" alt="mir">
+                    </div>
+                    <div class="payment__item">
+                        <img src="../img/visa.svg" alt="visa">
+                    </div>
+                    <div class="payment__item">
+                        <img src="../img/masterCard.svg" alt="masterCard">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__row">
+            <div class="copyright">
+                2020 © Приборы Сибирь. Продажа контрольно-измерительных приборов и автоматики
+            </div>
+            <a href="#" class="footer__link footer__link_sol">Создание сайта <img src="../img/sol.png" alt=""></a>
+        </div>
+        <div class="footer__row">
+            <span class="footer__link btn-politics">Политика конфиденциальности</span>
+            <span class="footer__link btn-agree">Согласие на обработку персональных данных</span>
+        </div>
+    </footer>
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery.nicescroll.min.js"></script>
+    <script src="../js/jquery.fancybox.min.js"></script>
+    <script src="../js/jquery.nice-select.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/jquery.maskedinput.min.js"></script>
+    <script async src="https://usocial.pro/usocial/usocial.js?v=6.1.4" data-script="usocial" charset="utf-8"></script>
+    <script src="../js/parsley.js"></script>
+    <script src="../js/main-script.js"></script>
+</body>
+
+</html>

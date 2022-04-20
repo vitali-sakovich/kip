@@ -1,0 +1,106 @@
+@import 'fonts';
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  
+  html {
+    height: 100%; }
+  
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100%; 
+    background: #3d4a62;
+    padding-left: 8.5%;
+}
+  
+  header {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto; }
+  
+  .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto; }
+  
+  footer {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto; }
+
+
+    @import 'blocks/header';
+    @import 'blocks/footer';
+    @import 'blocks/index';  
+    @import 'blocks/modal';
+    @import 'blocks/contacts';
+    @import 'blocks/cooperation';
+    @import 'blocks/delivery';
+    @import 'blocks/about';
+    @import 'blocks/catalog-detail';
+    @import 'blocks/projects';
+    @import 'blocks/request';
+    @import 'blocks/favorites';
+    @import 'blocks/account';
+    @import 'blocks/catalog';
+    @import 'blocks/media';
+    
+
+    .preloader{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 1100;
+      background: #3d4a62;
+    }
+    .preloader__block{
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .preloader.loader{
+      opacity: 0;
+      z-index: -1;
+      transition: 0.3s;
+    }
+    .button{
+      cursor: pointer;
+    }
+   .btn-row{
+     display: flex;
+     justify-content: space-between;
+     margin-top: 17px;
+   }
+   .btn-row .button_link{
+     margin: 0;
+   }

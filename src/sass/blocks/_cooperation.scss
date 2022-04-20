@@ -1,0 +1,55 @@
+.text{
+    display: block;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.47;
+    color: #fff;
+}
+.text.text_middle{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.cooperation-block{
+    display: block;
+    margin-top: -10px;
+    padding-bottom: 30px;
+}
+.download-box{
+    display: flex;
+    margin-top: 30px;
+}
+.download-box .download:nth-child(1){
+    margin-right: 90px;
+}
+.cooperation-block .text{
+    width: 78%;
+    min-width: 710px;
+}
+.input-file{
+    display: none;
+}
+.label-file{
+    display: flex;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.file-name{
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    position: relative;
+    padding-right: 50px;
+}
+.attach{
+    margin-right: 8px;
+}
+.label-file__clear{
+    font-size: 50px;
+    position: absolute;
+    right: 0;
+
+}

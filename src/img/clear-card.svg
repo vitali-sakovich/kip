@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="19px" viewBox="0 0 15 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="1280" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="2-корзина-приборы" transform="translate(-1013.000000, -145.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-6-Copy-6" transform="translate(640.000000, 125.000000)">
+                <g id="Group-2">
+                    <path d="M388,22 L388,23 C388,23.7761424 387.790133,24 387,24 L374,24 C373.209867,24 373,23.7761424 373,23 L373,22 C373,22.2238576 373.209867,22 374,22 L378,22 L378,21 C377.6875,20.4477153 378.107233,20 379,20 L382,20 C382.892767,20 383.3125,20.4477153 383,21 L383,22 L387,22 C387.790133,22 388,22.2238576 388,22 Z M375,37 C374.876243,38.2474347 375.688024,39.0023906 376,39 L385,39 C385.330548,39.0023906 386.142329,38.2474347 386,37 L387,26 L374,26 L375,37 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

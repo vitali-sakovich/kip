@@ -1,0 +1,94 @@
+.contacts{
+    display: flex;
+    padding-bottom: 50px;
+}
+.contacts__col{
+    display: block;
+}
+.contacts__box{
+    display: block;
+    margin-bottom: 40px;
+    width: 300px;
+}
+.contacts__name{
+    display: block;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.08;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.conatcts__link{
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.08;
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+.conatcts__link:link{
+    color: #fff;
+}
+.conatcts__link:hover{
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+span.conatcts__link:hover{
+    opacity: 1;
+}
+.contacts-requisites{
+    display: flex;
+    margin-bottom: 27px;
+}
+.requisites-name{
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.13;
+    color: #ffffff;
+    width: 160px;
+}
+.requisites-text{
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.13;
+    color: #fff;
+    width: 200px;
+}
+.requisites-name_width{
+    width: 100%;
+    margin-bottom: 27px;
+}
+.contacts .download{
+    margin-top: 30px;
+}
+.contacts-col:last-child{
+    padding-right: 42px;
+    margin-left: 240px;
+}
+.map{
+    width: 100%;
+    height: 530px;
+}
+.parsley-errors-list{
+    position: absolute;
+    font-size: 12px;
+    color: #ff3535;
+    font-weight: normal;
+    list-style: none;
+    top: -17px;
+    right: 0;
+}
+.textarea.parsley-error{
+    border: 1px solid red;
+}
+.content_contacts .section-form{
+    margin-bottom: 120px;
+    margin-top: 91px;
+}
+.requisites-text:link{
+    color: #fff;
+    text-decoration: none;
+}
